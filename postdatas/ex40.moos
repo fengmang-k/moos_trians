@@ -1,0 +1,15 @@
+ServerPort = 9000
+Serverhost = localhost
+
+ProcessConfig = Simulator
+{
+    AppTick = 10
+    CommsTick = 10
+
+    VehicleName = TheGoodShipMOOS
+
+    InitialLocation = [3 x 1]{0,1,2}
+
+    InitialConditions = Bilge = off, BatteryVoltage = 101, Heading = 0.57
+    
+}
