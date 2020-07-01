@@ -6,7 +6,7 @@ endif(COMMAND cmake_policy)
 
 project(SimEX)
 #this builds an example program
-set(EXECNAME SimEx30)
+set(EXECNAME ex301)
 
 find_package(MOOS 10)
 

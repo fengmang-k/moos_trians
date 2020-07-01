@@ -1,14 +1,17 @@
 #include "Simulator.h"
 
 int main(int argc, char *argv[]){
-    MOOS::CommandLineParser P(argc, argv);
+    const char *sMissionFile = "Mission.moos";
+    const char *sMOOSName = "PostDatas";
 
-    std::string mission_file = P.GetFreeParameter(0, "ex40.moos");
-    std::string app_name = P.GetFreeParameter(1, "Simulator");
-
-
+    switch(argc){
+        case 3:
+            sMOOSName = argv[2];
+        case 2:
+            sMissionFile = argv[1];
+    }
     CSimulator TheApp;
-    TheApp.Run(app_name, mission_file, argc, argv);
+    TheApp.Run(sMOOSName, sMissionFile);
 
     return 0;
 

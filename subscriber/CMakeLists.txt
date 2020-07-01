@@ -8,7 +8,7 @@ endif(COMMAND cmake_policy)
 
 
 #this builds an example program
-set(EXECNAME SimpleApp)
+set(EXECNAME ex302)
 
 find_package(MOOS 10)
 

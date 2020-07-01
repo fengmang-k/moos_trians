@@ -1,0 +1,30 @@
+ServerPort = 9000
+Serverhost = localhost
+
+ProcessConfig = Antler
+{
+    Run = MOOSDB @NewConsole = true, path = /home/ace/moos-ivp/ivp/bin
+
+    Run = ex301 @NewConsole =true, path = ./postdatas/build
+
+    Run = ex302 @NewConsole = true, path = ./subscriber/build
+}
+
+ProcessConfig = ex301
+{
+    AppTick = 10
+    CommsTick = 10
+
+    VehicleName = TheGoodShipMOOS
+
+    InitialLocation = [3 x 1]{0,1,2}
+
+    InitialConditions = Bilge = off, BatteryVoltage = 101, Heading = 0.57
+    
+}
+
+ProcessConfig = ex302 
+{
+    AppTick = 10
+    CommsTick = 10
+}
